@@ -1,0 +1,112 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #262626;
+$secondary-color: #222222;
+
+
+body{
+background-color: $primary-color;
+}
+
+.Limiter{
+    width: 100%;
+    margin: 0 auto;
+
+
+    .container{
+        width: 100%;  
+    min-height: 50vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    background-color: $primary-color;
+    font-style: $font-stack;
+    }
+    .Wrap_Container{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: $secondary-color;
+    margin:-33px 75px;
+    }
+}
+.BORDER_Header{
+    text-align:center;
+    background-color: #EFF0F1;
+    border-radius: 6px;
+	width:15%;
+	height:-20%;
+    margin:auto;
+    margin-bottom: 10px;
+	font-size:13px;
+	padding: 10px 200px;
+    background-color: #505050;
+}
+input{
+//background-color: #575252;
+background-color: whitesmoke;
+width: 80%;
+padding: 8px 12px;
+margin: 10px 40px;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+.h1{
+    text-align: center;
+}
+.h1_User{
+    color: #888888;
+}
+.h1_Registration{
+        color:#33A4FF;
+}
+
+.label{
+    color: #BEBEBE;
+    margin: 7px 40px;
+    
+}
+.custom_select{
+    background-color: #cbd2d3;
+}
+.textarea{
+    margin: auto;
+    margin-left: 40px;
+}
+
+.btn{
+    margin: auto;
+    margin-left: 90px;
+    margin-top: 5%;
+    background-color: #33A4FF;
+    border-radius: 100px;
+    width: 200px;
+    height: 35px;
+
+    span{
+        color: #fff;
+        font-weight: bolder;
+        font-size: large;
+    }
+}
+
+.errormessage{
+
+    color: wheat;
+    text-align: center;
+    margin-left: 90px;
+}
+.Data{
+    color:white;
+}
