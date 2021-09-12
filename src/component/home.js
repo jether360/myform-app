@@ -49,7 +49,7 @@ function Mainpage() {
               }}
               onClick={()=>{
                 //alert("HI");
-                history.push('/SignIn');
+                history.push('/sign-up');
               }}
             >
               VISITOR
