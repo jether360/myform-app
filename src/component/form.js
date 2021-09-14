@@ -16,7 +16,7 @@ import "../css/style.css";
 import { Form, Input, SubmitButton } from "formik-antd";
 import * as Yup from "yup";
 import { Formik } from "formik";
-
+import { useHistory } from "react-router";
 
 const validationSchema = Yup.object().shape({
   fname: Yup.string().required("First Name is Required"),
@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function App() {
   const classes = useStyles();
-
+  let history = useHistory();
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -81,27 +81,31 @@ export default function App() {
             contact: "",
             purpose: "",
           }}
+          onSubmit={() => {
+            alert("HI");
+            history.push("/qr-code");
+          }}
         >
-            <Form className={classes.form}>
-              <Form.Item label="First name" name="fname">
-                  <Input name="fname" placeholder="First Name"/>
-              </Form.Item>
-              <Form.Item label="Surname" name="sname">
-                  <Input name="sname" placeholder="Surname"/>
-              </Form.Item>
-              <Form.Item label="Email" name="email">
-                  <Input name="email" placeholder="Email"/>
-              </Form.Item>
-              <Form.Item label="Address" name="address">
-                  <Input name="address" placeholder="Address"/>
-              </Form.Item>
-              <Form.Item label="Contact" name="contact">
-                  <Input name="contact" placeholder="Contact"/>
-              </Form.Item>
-              <Form.Item label="Purpose of Visit" name="purpose">
-                  <Input name="purpose" placeholder="Purpose of Visit"/>
-              </Form.Item>
-              <Button
+          <Form className={classes.form}>
+            <Form.Item label="First name" name="fname">
+              <Input name="fname" placeholder="First Name" />
+            </Form.Item>
+            <Form.Item label="Surname" name="sname">
+              <Input name="sname" placeholder="Surname" />
+            </Form.Item>
+            <Form.Item label="Email" name="email">
+              <Input name="email" placeholder="Email" />
+            </Form.Item>
+            <Form.Item label="Address" name="address">
+              <Input name="address" placeholder="Address" />
+            </Form.Item>
+            <Form.Item label="Contact" name="contact">
+              <Input name="contact" placeholder="Contact" />
+            </Form.Item>
+            <Form.Item label="Purpose of Visit" name="purpose">
+              <Input name="purpose" placeholder="Purpose of Visit" />
+            </Form.Item>
+            <Button
               type="submit"
               fullWidth
               variant="contained"
@@ -110,7 +114,7 @@ export default function App() {
             >
               Sign Up
             </Button>
-            </Form>
+          </Form>
         </Formik>
       </div>
       <Box mt={8}>

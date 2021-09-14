@@ -13,7 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import "../css/style.css";
-
+import QRCode from "react-qr-code";
 
 function Copyright() {
     return (
@@ -49,56 +49,15 @@ function Copyright() {
   }));
   
 
-export default function SignUp() {
+export default function QrCode() {
     const classes = useStyles();
 
 
     return (
         <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <div className={classes.paper}>
-          <Avatar className={classes.avatar}>
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign Up
-          </Typography>
-          <form className={classes.form} noValidate>
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-            >
-              Sign Up
-            </Button>
-          </form>
-        </div>
-        <Box mt={8}>
-          <Copyright />
-        </Box>
+          <br/>
+        <QRCode value={"Hello World"}/>
+        <h1>STRING RANI</h1>
       </Container>
     );   
 }
