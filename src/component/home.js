@@ -65,7 +65,7 @@ function Mainpage() {
                 fontSize: "30px",
               }}
             >
-              ADMIN
+              Eloyskie
             </Button>
           </form>
         </div>
